@@ -263,6 +263,7 @@ a:active {
     box-sizing: border-box;
     z-index: 10;
     display: grid; /* new addition mine */
+	grid-template-areas: "a b c d";
 }
 #grid-wrapper {
     display: grid;
@@ -472,6 +473,9 @@ height: 35px;
 	
 	
 @media only screen and (max-width: 1024px) {
+	
+
+	
 .grid-item-1 {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
@@ -493,51 +497,51 @@ height: 35px;
     grid-column: 1 / 6;
     grid-row: 4 / 6;
 }
-.grid-item-5 {
+.grid-item-8 {
     grid-column: 1 / 3;
     grid-row: 6 / 8;
     justify-content: left;
     padding-left: 3rem;
-	width: 470px; /*NEW NEW */
+	width: 300px; /*NEW NEW */
 }
-.grid-item-5 a, .grid-item-5 a:hover {
+.grid-item-8 a, .grid-item-5 a:hover {
     width: 413px;
     height: 405px;
 }
-.grid-item-6 {
+.grid-item-7 {
     grid-column: 1 / 3;
     grid-row: 8 / 10;
     justify-content: left;
     padding-left: 3rem;
-	width: 503px; /*NEW NEW */
+	width: 322px; /*NEW NEW */
 }
-.grid-item-6 a, .grid-item-6 a:hover {
+.grid-item-7 a, .grid-item-6 a:hover {
     width: 450px;
     height: 300px;
 }
-.grid-item-7 {
+.grid-item-6 {
     grid-column: 1 / 3;
     grid-row: 10 / 12;
     justify-content: left;
     padding-left: 3rem;
-		width: 480px; /*NEW NEW */
+		width: 312px; /*NEW NEW */
 }
-.grid-item-7 a, .grid-item-7 a:hover {
+.grid-item-6 a, .grid-item-6 a:hover {
 	width: 430px;
     height: 430px;
 }
-.grid-item-8 {
+.grid-item-5 {
     grid-column: 1 / 3;
     grid-row: 12 / 14;
     justify-content: left;
     padding-left: 3rem;
-			width: 460px; /*NEW NEW */
+	width: 260px; /*NEW NEW */
 }
-.grid-item-8 a, .grid-item-8 a:hover {
-        width: 425px;
+.grid-item-5 a, .grid-item-5 a:hover {
+    width: 425px;
     height: 510px;
-
 }
+	
 .grid-item-9 {
     grid-column: 1 / 6;
     grid-row: 14 / 16;
@@ -545,6 +549,25 @@ height: 35px;
     padding-left: 3rem;
 }
 	
+	.grid-item-5 p {
+	width: 260px; /*NEW NEW */
+	}
+	
+	.grid-item-6 p {
+	width: 300px; /*NEW NEW */
+	}
+	
+	
+	.grid-item-7 p {
+			width: 227px; /*NEW NEW */
+		
+	}
+	
+	
+	
+	.grid-item-8 p {
+			width: 250px; /*NEW NEW */
+	}
 	
 	#menu-click {
     height: 35px;
@@ -676,12 +699,18 @@ padding-right: 20px;
 		
 		}
 		
+	.grid-item-6 p {
+		
+		width: 299px;
+	}
+	
+	
 .grid-item-5 {
     grid-column: 1 / 3; /* 1 / 3 */
     grid-row: 6 / 8;
     justify-content: left;
     padding-left: 1rem;
-	width: 266px;
+	width: 230px;
 	
 }
 .grid-item-5 a, .grid-item-5 a:hover {
@@ -694,7 +723,7 @@ padding-right: 20px;
     justify-content: left;
     padding-left: 1rem;
 	border: 1px solid green;
-	width: 320px;
+	width: 280px;
 }
 .grid-item-6 a, .grid-item-6 a:hover {
     width: 300px;
@@ -856,8 +885,10 @@ height: 35px;
 		<p>And, have you ever seen a nebula that looks like a number? <em>37 Cluster</em>, 2009, lends itself to possible comments on absurdity, although the source material for this piece is retrieved from a scientific magazine. A dry spray painting on aluminium presents the contradiction of making sense of a group of stars by ‘discovering’ the number 37 written in the deep sky. Is this for real, would you believe it? 
 		</p>
 		
-		<p>
-		
+		<p>-- Inês Rebelo<br />
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Cras semper auctor neque vitae. Egestas egestas fringilla phasellus faucibus. Eget nullam non nisi est sit. Nam aliquam sem et tortor consequat. Turpis massa sed elementum tempus egestas. Suscipit adipiscing bibendum est ultricies integer. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Ante in nibh mauris cursus mattis molestie a iaculis at. <br/>
+			
+			<a href="https://inesrebelo.info">inesrebelo.info</a>
 		
 		</p>
 		
@@ -872,21 +903,21 @@ height: 35px;
 			</div>
 			<!-- end of images -->
     
-	  <div class="grid-item-8"> <img src="imgs/TwoSuns.jpg" alt="" width="250" height="313" />
-		  <p><em>Two Suns</em>, 2023, </p>
+	  <div class="grid-item-8" id="a"> <img src="imgs/TwoSuns.jpg" alt="" width="250" height="313" />
+		  <p><em>Two Suns</em>, 2023 </p>
     </div>
 	  
-	  <div class="grid-item-7"> <img src="imgs/Sun-mandarins.jpg" alt="" width="270" height="270" />
+	  <div class="grid-item-7" id="b"> <img src="imgs/Sun-mandarins.jpg" alt="" width="270" height="270" />
 		  <p><em>Sun (mandarins)</em>, 2019<br/>
 			  Cast aluminium, 3.8cm x 4.8cm x 5.2cm (each), set of 3</p>
     </div>
 	  
-	  <div class="grid-item-6"> <img src="imgs/Radioastronomy.jpg" alt="" width="300" height="195" />
+	  <div class="grid-item-6" id="c"> <img src="imgs/Radioastronomy.jpg" alt="" width="300" height="195" />
 		  <p><em>Radioastronomy (here comes the Sun)</em>, 2018 <br/>
 			  Felt-tip permanent pen and laserjet colour print drawings on fine grain 250gsm paper, 29.7 x 42 cm (each), set of 20</p>
     </div>
 	  
-    <div class="grid-item-5"><img src="imgs/37Cluster.jpg" alt="" width="250" height="242" />
+    <div class="grid-item-5" id="d"><img src="imgs/37Cluster.jpg" alt="" width="250" height="242" />
 		<p><em>37 Cluster</em>, 2009<br/>Enamel on aluminium, 55x57cm
       </p>
     </div>
